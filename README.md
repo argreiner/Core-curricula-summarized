@@ -1,2 +1,1 @@
-# Core-curricula-summarized
-## BEngCoreCurriculum
+# Bachelor of Engineering Core Curriculum
