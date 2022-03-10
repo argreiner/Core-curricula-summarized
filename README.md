@@ -1,0 +1,2 @@
+# Core-curricula-summarized
+## BEngCoreCurriculum
