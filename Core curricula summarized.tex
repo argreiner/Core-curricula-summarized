@@ -24,7 +24,9 @@
 % Comments/modifications
 \usepackage{color}
 \newcommand{\lp}[1]{{\color{red} #1}}  % Lars Pastewka
-
+\newcommand{\ag}[1]{{\color{blue}AG: #1}}  % Andreas Greiner
+%
+\newcommand{\goalapps}[2]{\newline\textbf{Learning goals:} #1\newline\textbf{Application areas:} #2}
 % Formatting settings
 \singlespacing
 
@@ -84,33 +86,41 @@ v. 1 -- \today
 
 \begin{itemize}
 \setlength\itemsep{0cm}
-\item Fundamentals of logic
-\begin{itemize}
+\item Fundamentals of logic. 
+\goalapps{Cantor's definition of sets and its relation to propositions for which it makes sense to assign the values true or false. More advanced algebraic structures like monoids, groups, rings, and fields.}{Propositional Calculus and Boolean Algebra applied for Digital Electonics. Algebraic structures as a basic ingredient for linear algebra and differential equations.}
+\begin{enumerate}
     \item Sets
     \item Propositions and propositional calculus 
-    \item Algebraic structures
     \item Boolean algebra
-\end{itemize}
+    \item Algebraic structures
+\end{enumerate}
 \item Numbers
-\begin{itemize}
+\goalapps{
+Understand number theory, primes, binary systems (basis $2$) for integers and complex integers (basis $(i-1)$).}{
+Application areas: Communication, algorithms, cryptography.}
+\begin{enumerate}
     \item Natural numbers and integers
     \item Rational numbers
     \item Real and complex numbers
-\end{itemize}
+\end{enumerate}
 
 \item Linear Algebra
-\begin{itemize}
+\goalapps{
+Linear systems of equations and how to categorize and solve them. Matrix properties and manipulation and their relation to linear systems and vector spaces. Generalization of vector spaces to inner product spaces.
+}{
+Linear equation solving is required in all fields. System theory needs concenpts of linear algebra. Tensor concept is needed in mechanics. Inner product spaces build the basis for integral transforms and variational calculus.}
+\begin{enumerate}
     \item Vector spaces
     \item Linear independence, bases, dimension
     \item Scalar product and metric
     \item Systems of linear equations
     \item Gaussian elimination
     \item Relation of the solution of linear systems to vector spaces
-    \item Determminants and matrices
+    \item Determinants and matrices
     \item Rank of matrices, quadratic matrices
     \item Spectrum and normal forms of quadratic matrices
     \item Tensors and matrices
-\end{itemize}
+\end{enumerate}
 \end{itemize}
 
 
@@ -124,16 +134,21 @@ v. 1 -- \today
 \begin{itemize}
 \setlength\itemsep{0cm}
 \item Calculus
+\goalapps{Understand differentiation and integration in one and higher dimesions.}{All fields.}
+
 \begin{enumerate}
     \item Functions of one and multiple variables
     \item Differentiation, one and multiple variables
+    \item Taylor series
     \item Integration, one and multiple variables
     \item Convergence, limits and series
     \item Normed vector spaces
-    \item Complex analysis: Complex functions, integration, residual theorem
-    \item Integral transforms: Fourier and Laplace
+    \item Complex analysis: Complex functions, integration, residual theorem, Laurent-series
+    \item Integral transforms: Fourier and Laplace, its discrete versions, Z-transform
 \end{enumerate}
 \item Tensoranalysis
+\goalapps{Curl, grad, div, integral theorems (Gauß, Stokes).}{Mainly Electrodynamics and Elasticity.}
+
 \begin{enumerate}
     \item Differentiation of vector fields
     \item Divergence, curl, and gradient
@@ -154,7 +169,8 @@ v. 1 -- \today
 \item \lp{It would be good if data science came after differential equations}
 \item Frequentist probability
 \item Bayesian probability
-\item Stochastic processes (Langevin and Fokker-Planck equations)
+\item Stochastic processes (Langevin and Fokker-Planck equations) (\ag{To cope with this we definitely need PDEs while SDEs may be introduced right here})
+\item \ag{Integration of Stochastic Differential Equations}
 \item Parametric Bayesian inference
 \item Gaussian processes and nonparametric Bayesian inference
 \item Neuronal networks
@@ -167,18 +183,22 @@ v. 1 -- \today
 \textbf{Semester:} 4 & \textbf{ECTS:} 6 & \textbf{Lab:} yes & \textbf{Possible instructors:} Moritz Diehl, Andreas Greiner, Lars Pastewka \\
 \hline
 \end{tabular}
-\lp{I strongly suggest to put DEs right after engineering math 2}
+%
+\ag{I strongly suggest to put DEs right after engineering math 2}
 \begin{itemize}
 \setlength\itemsep{0cm}
 \item Differential Equations
+\goalapps{What model needs which differential equation. How to solve linear DEs. The paradigm of the Harmonic Oscillator in all facets. Nonlinear equations, what are the models to need those equations (Volterra-Lotka, Predator-Prey, Epidemia). The normal forms of a nonlinear differential equation and how to achieve it (Poincaré-Dulac). Partial differential equations and the method of characteristics for 1st order equations. The three types of linear Partial Differential equations of second order: elliptic (Laplace), parabolic (Diffusion), hyperbolic (Wave equation).}{All System descriptions need DEs. There are plenty of beautiful examples to be given for direct connection to phenomena. Relaxation behaviour, oscillatory behaviour, snowshoe hare and Canadian lynx population dynamics. Schrödinger equation as a preparatory for semiconductor physics.}
 \begin{enumerate}
     \item Ordinary Differential Equations
     \item Systems of ordinary differential equations
     \item Partial Differential Equation
-    \item Nonlinear Differential Equations
+    \item Nonlinear Differential Equations and Normal Forms
+    \item Dynamical systems: Stability analysis
     \item Numerical methods
 \end{enumerate}
 \item Calculus of variations
+\goalapps{Derivation of the respective equations of motion, i.e. differential equations by variational principles.}{Mechanics, electro-mechanical systems, preparation for optimization problems}
 \begin{enumerate}
     \item Functionals
     \item The variation of a functional
@@ -189,11 +209,10 @@ v. 1 -- \today
     \item Variational methods in problems of optimal control
 \end{enumerate}
 
-\item Stability of dynamical systems
-\item Analysis and visualization of results (Python Lab, goes into all subjects)
+\item Analysis and visualization of results (Python Lab, goes into all subjects and thus with the exercises)
+\goalapps{Prepare the students for a decent represention of results by numerically solving DEs and visualization. How to make a meaningful viewgraph}{All lab report work.}
 \end{itemize}
-\lp{Since there will be no more Simulation course I propose to do a lot of hands on DE solving
-and visualization with Python$\rightarrow$ needs Programming in 1st term, Python only and to be used throughout the programme.}
+\ag{Since there will be no more Simulation course I propose to do a lot of hands on DE solving and visualization with Python$\rightarrow$ needs Programming in 1st term, Python only and to be used throughout the programme.}
 
 %%%%%%%%%%%%%%%%%%%%%
 \subsection{Control systems}
@@ -432,11 +451,13 @@ and visualization with Python$\rightarrow$ needs Programming in 1st term, Python
 
 \begin{itemize}
 \setlength\itemsep{0cm}
-\item This and that and
-\item Semiconductor band structures
-\item Electronic transport and transport properties
-\item Elementrary excitations in SCs
-
+\item Band structure
+\item Charge carrier statistics
+\item Transport
+\item Mechanical and thermal properties of crystalline semiconductors
+\item Generation and recombination
+\item Devices I: diode, bipolar transistor, 
+\item Devices II: Field-effect transistor
 \end{itemize}
 
 
@@ -475,7 +496,7 @@ and visualization with Python$\rightarrow$ needs Programming in 1st term, Python
 \item Sources
 \item dc network analysis
 \item Fourier analysis
-\item \lp{Prepare FT\&LT in Eng. Math 2}
+\item \ag{Prepare FT\&LT in Eng. Math 2}
 \item ac network analysis, frequency response, \& switching
 \item Feedback networks
 \item Digital systems
@@ -564,8 +585,16 @@ and visualization with Python$\rightarrow$ needs Programming in 1st term, Python
 \hline
 \end{tabular}
 
+
+
+\textbf {Ossi:} Atomaufbau und Chemische Bindung kommen auch im Physics Track bei den Festlörpern, aber ich denke, das wäre eine hilfreiche und gewollte Redundanz, da wir hier eher phänomenologisch rangingen.
+
+
+
 \begin{itemize}
 \setlength\itemsep{0cm}
+
+
 \item Atommodelle
 \item Chemische Bindung
 \item Phasen
@@ -573,7 +602,7 @@ and visualization with Python$\rightarrow$ needs Programming in 1st term, Python
 \item pH-Werte
 \item Massentransport
 \item Elektrochemie
-\item Analytische Verfahren (IR,NMR...)
+\item Instrumentelle Analytik (IR,NMR, UV-Vis)
 \end{itemize}
 
 
@@ -612,8 +641,8 @@ and visualization with Python$\rightarrow$ needs Programming in 1st term, Python
 
 \begin{itemize}
 \setlength\itemsep{0cm}
-\item Analysis
-\item Synthesis
+\item Organic and inorganic Synthesis
+\item Instrumental Analysis
 \item Project-oriented connection to engineering problem
 \end{itemize}
 
